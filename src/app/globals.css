@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode (Signature White & Royal Blue) */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F0F5FF;
+  --text-primary: #0A0F1D;
+  --text-secondary: #475569;
+  --text-muted: #64748B; /* WCAG AA > 4.5:1 compliant on #FFFFFF */
+  --accent: #0052FF;      /* Core Electric Royal Blue */
+  --accent-hover: #003ECC;
+  --accent-soft: rgba(0, 82, 255, 0.08);
+  --border: #E2E8F0;
+  --border-accent: rgba(0, 82, 255, 0.35);
+  --shadow-color: rgba(0, 82, 255, 0.06);
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --nav-border: #E2E8F0;
+  --pill-bg: #FFFFFF;
+  --pill-border: rgba(0, 82, 255, 0.2);
+}
+
+.dark {
+  /* Dark Mode (Deep Midnight Navy & Vivid Cyan-Blue) */
+  --bg-primary: #070D1E;
+  --bg-secondary: #0D162E;
+  --bg-card: #111D3C;
+  --bg-card-hover: #16264F;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8; /* High contrast on dark background (>7:1) */
+  --accent: #38BDF8;      /* Electric Cyan-Blue in dark mode */
+  --accent-hover: #60A5FA;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+  --border: #1E2E52;
+  --border-accent: rgba(56, 189, 248, 0.35);
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --nav-bg: rgba(13, 22, 46, 0.92);
+  --nav-border: rgba(255, 255, 255, 0.12);
+  --pill-bg: rgba(56, 189, 248, 0.1);
+  --pill-border: rgba(56, 189, 248, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

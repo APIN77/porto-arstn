@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="aiBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="netGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052FF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="lossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,82,255,0.3)"/>
+      <stop offset="100%" stop-color="rgba(0,82,255,0.0)"/>
+    </linearGradient>
+    <filter id="aiShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0052FF" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#aiBgGrad)"/>
+
+  <!-- Blueprint Grid -->
+  <g opacity="0.35" stroke="#CBD5E1" stroke-width="0.75" stroke-dasharray="4 4">
+    <line x1="80" y1="0" x2="80" y2="750"/><line x1="240" y1="0" x2="240" y2="750"/><line x1="400" y1="0" x2="400" y2="750"/><line x1="560" y1="0" x2="560" y2="750"/><line x1="720" y1="0" x2="720" y2="750"/><line x1="880" y1="0" x2="880" y2="750"/><line x1="1040" y1="0" x2="1040" y2="750"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/><line x1="0" y1="280" x2="1200" y2="280"/><line x1="0" y1="440" x2="1200" y2="440"/><line x1="0" y1="600" x2="1200" y2="600"/>
+  </g>
+
+  <!-- Main AI Lab Frame -->
+  <g filter="url(#aiShadow)">
+    <rect x="50" y="45" width="1100" height="660" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Window Title Bar -->
+    <path d="M 50 65 A 20 20 0 0 1 70 45 L 1130 45 A 20 20 0 0 1 1150 65 L 1150 105 L 50 105 Z" fill="#F8FAFC"/>
+    <line x1="50" y1="105" x2="1150" y2="105" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Traffic Dots -->
+    <circle cx="82" cy="75" r="6" fill="#EF4444"/>
+    <circle cx="102" cy="75" r="6" fill="#F59E0B"/>
+    <circle cx="122" cy="75" r="6" fill="#10B981"/>
+
+    <text x="155" y="80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#0A0F1D">
+      PYTHON AI LAB <tspan fill="#94A3B8" font-weight="500">/ MACHINE LEARNING &amp; NEURAL EXPLORATION WORKFLOW</tspan>
+    </text>
+
+    <!-- Lab Status -->
+    <rect x="960" y="62" width="160" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+    <circle cx="976" cy="75" r="4" fill="#0052FF"/>
+    <text x="988" y="79" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#0052FF">CONVERGED • 94.8%</text>
+
+    <!-- LEFT PANEL: Code Editor Card -->
+    <g transform="translate(80, 130)">
+      <rect width="500" height="530" rx="16" fill="#0A0F1D" stroke="#1E293B" stroke-width="1.5"/>
+
+      <!-- Code Editor Tab -->
+      <path d="M 0 16 A 16 16 0 0 1 16 0 L 484 0 A 16 16 0 0 1 500 16 L 500 42 L 0 42 Z" fill="#111827"/>
+      <line x1="0" y1="42" x2="500" y2="42" stroke="#1F2937" stroke-width="1"/>
+      <rect x="16" y="10" width="160" height="24" rx="6" fill="#1F2937"/>
+      <circle cx="28" cy="22" r="3.5" fill="#38BDF8"/>
+      <text x="38" y="26" font-family="'JetBrains Mono', monospace, Consolas" font-size="11" font-weight="600" fill="#E2E8F0">sentiment_net.py</text>
+
+      <!-- Code Syntax Lines -->
+      <g transform="translate(20, 68)" font-family="'JetBrains Mono', monospace, Consolas" font-size="12" xml:space="preserve">
+        <!-- Line 1 -->
+        <text x="0" y="18" fill="#64748B">01</text>
+        <text x="32" y="18" fill="#F43F5E">import </text><text x="82" y="18" fill="#F8FAFC">torch</text>
+        <text x="124" y="18" fill="#F43F5E">import </text><text x="174" y="18" fill="#F8FAFC">torch.nn </text><text x="240" y="18" fill="#F43F5E">as </text><text x="264" y="18" fill="#38BDF8">nn</text>
+
+        <!-- Line 2 -->
+        <text x="0" y="42" fill="#64748B">02</text>
+        <text x="32" y="42" fill="#F43F5E">from </text><text x="70" y="42" fill="#F8FAFC">sklearn.feature_extraction.text </text><text x="324" y="42" fill="#F43F5E">import </text><text x="376" y="42" fill="#38BDF8">TfidfVectorizer</text>
+
+        <!-- Line 3 -->
+        <text x="0" y="66" fill="#64748B">03</text>
+        <text x="32" y="66" fill="#F43F5E">from </text><text x="70" y="42" fill="#F8FAFC">sklearn.svm </text><text x="156" y="66" fill="#F43F5E">import </text><text x="208" y="66" fill="#38BDF8">SVC</text>
+
+        <!-- Line 4 -->
+        <text x="0" y="94" fill="#64748B">04</text>
+        <text x="32" y="94" fill="#60A5FA"># Pipeline Inisialisasi &amp; Ekstraksi Fitur</text>
+
+        <!-- Line 5 -->
+        <text x="0" y="118" fill="#64748B">05</text>
+        <text x="32" y="118" fill="#F8FAFC">vectorizer = </text><text x="134" y="118" fill="#38BDF8">TfidfVectorizer</text><text x="252" y="118" fill="#94A3B8">(max_features=5000, ngram_range=(1,2))</text>
+
+        <!-- Line 6 -->
+        <text x="0" y="142" fill="#64748B">06</text>
+        <text x="32" y="142" fill="#F8FAFC">X_train_vec = vectorizer.</text><text x="238" y="142" fill="#38BDF8">fit_transform</text><text x="340" y="142" fill="#94A3B8">(X_train)</text>
+
+        <!-- Line 7 -->
+        <text x="0" y="170" fill="#64748B">07</text>
+        <text x="32" y="170" fill="#60A5FA"># Model Support Vector Machine Classifier</text>
+
+        <!-- Line 8 -->
+        <text x="0" y="194" fill="#64748B">08</text>
+        <text x="32" y="194" fill="#F8FAFC">model = </text><text x="96" y="194" fill="#38BDF8">SVC</text><text x="122" y="194" fill="#94A3B8">(kernel=</text><text x="186" y="194" fill="#34D399">'linear'</text><text x="250" y="194" fill="#94A3B8">, C=1.0, probability=</text><text x="408" y="194" fill="#F43F5E">True</text><text x="440" y="194" fill="#94A3B8">)</text>
+
+        <!-- Line 9 -->
+        <text x="0" y="218" fill="#64748B">09</text>
+        <text x="32" y="218" fill="#F8FAFC">model.</text><text x="82" y="218" fill="#38BDF8">fit</text><text x="108" y="218" fill="#94A3B8">(X_train_vec, y_train)</text>
+
+        <!-- Line 10 -->
+        <text x="0" y="246" fill="#64748B">10</text>
+        <text x="32" y="246" fill="#F8FAFC">predictions = model.</text><text x="204" y="246" fill="#38BDF8">predict</text><text x="264" y="246" fill="#94A3B8">(X_test_vec)</text>
+
+        <!-- Line 11 -->
+        <text x="0" y="270" fill="#64748B">11</text>
+        <text x="32" y="270" fill="#F8FAFC">score = </text><text x="92" y="270" fill="#38BDF8">accuracy_score</text><text x="210" y="270" fill="#94A3B8">(y_test, predictions)</text>
+
+        <!-- Output Terminal Window -->
+        <g transform="translate(0, 310)">
+          <rect width="460" height="110" rx="10" fill="#020617" stroke="#1E293B" stroke-width="1"/>
+          <text x="14" y="24" fill="#38BDF8" font-size="11" font-weight="700">TERMINAL OUTPUT &gt;&gt;</text>
+          <text x="14" y="48" fill="#34D399" font-size="12">[INFO] Model Training Complete (1.42s)</text>
+          <text x="14" y="70" fill="#F8FAFC" font-size="12">&gt; Test Accuracy : </text><text x="146" y="70" fill="#38BDF8" font-weight="700">0.9074 (90.74%)</text>
+          <text x="14" y="92" fill="#F8FAFC" font-size="12">&gt; F1-Weighted   : </text><text x="146" y="92" fill="#38BDF8" font-weight="700">0.9082</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- RIGHT PANEL: Topology & Convergence Curves -->
+    <g transform="translate(615, 130)">
+      <text x="0" y="24" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#0052FF" letter-spacing="0.08em">TOPOLOGI &amp; LOSS OPTIMISASI</text>
+      <text x="0" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" fill="#0A0F1D">Alur Arsitektur &amp; Pelatihan</text>
+
+      <!-- Neural Network Graph Card -->
+      <g transform="translate(0, 75)">
+        <rect width="485" height="230" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="20" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#0052FF">GRAPH LAYER DEEP LEARNING (INPUT -> DENSE -> OUTPUT)</text>
+
+        <!-- Neural Nodes & Connections -->
+        <!-- Layer 1 (Input, x=60) -->
+        <line x1="70" y1="70" x2="190" y2="60" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="70" x2="190" y2="110" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="70" x2="190" y2="160" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="120" x2="190" y2="60" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="120" x2="190" y2="110" stroke="#0052FF" stroke-width="1.5" opacity="0.7"/>
+        <line x1="70" y1="120" x2="190" y2="160" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="170" x2="190" y2="60" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="170" x2="190" y2="110" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="70" y1="170" x2="190" y2="160" stroke="#0052FF" stroke-width="1.5" opacity="0.6"/>
+
+        <!-- Layer 2 (Hidden 1, x=190 to Layer 3, x=310) -->
+        <line x1="190" y1="60" x2="310" y2="80" stroke="#38BDF8" stroke-width="1.5" opacity="0.5"/>
+        <line x1="190" y1="60" x2="310" y2="140" stroke="#38BDF8" stroke-width="1.5" opacity="0.4"/>
+        <line x1="190" y1="110" x2="310" y2="80" stroke="#38BDF8" stroke-width="2" opacity="0.8"/>
+        <line x1="190" y1="110" x2="310" y2="140" stroke="#38BDF8" stroke-width="1.5" opacity="0.5"/>
+        <line x1="190" y1="160" x2="310" y2="80" stroke="#38BDF8" stroke-width="1.5" opacity="0.4"/>
+        <line x1="190" y1="160" x2="310" y2="140" stroke="#38BDF8" stroke-width="1.5" opacity="0.7"/>
+
+        <!-- Layer 3 to Output (x=410) -->
+        <line x1="310" y1="80" x2="410" y2="90" stroke="#0052FF" stroke-width="2" opacity="0.9"/>
+        <line x1="310" y1="80" x2="410" y2="140" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="310" y1="140" x2="410" y2="90" stroke="#0052FF" stroke-width="1.5" opacity="0.4"/>
+        <line x1="310" y1="140" x2="410" y2="140" stroke="#0052FF" stroke-width="2" opacity="0.8"/>
+
+        <!-- Nodes -->
+        <circle cx="70" cy="70" r="10" fill="#0052FF" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="70" cy="120" r="10" fill="#0052FF" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="70" cy="170" r="10" fill="#0052FF" stroke="#FFFFFF" stroke-width="2"/>
+
+        <circle cx="190" cy="60" r="11" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="190" cy="110" r="11" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="190" cy="160" r="11" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+
+        <circle cx="310" cy="80" r="11" fill="#38BDF8" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="310" cy="140" r="11" fill="#38BDF8" stroke="#FFFFFF" stroke-width="2"/>
+
+        <circle cx="410" cy="90" r="12" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"/>
+        <circle cx="410" cy="140" r="12" fill="#F43F5E" stroke="#FFFFFF" stroke-width="2.5"/>
+
+        <text x="70" y="202" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748B" text-anchor="middle">Input (5K)</text>
+        <text x="190" y="202" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748B" text-anchor="middle">Dense 128</text>
+        <text x="310" y="202" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748B" text-anchor="middle">Dense 64</text>
+        <text x="410" y="202" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#0052FF" text-anchor="middle">Softmax</text>
+      </g>
+
+      <!-- Loss & Validation Convergence Chart -->
+      <g transform="translate(0, 325)">
+        <rect width="485" height="200" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="20" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#0052FF">KURVA KONVERGENSI PELATIHAN (EPOCH 1 -> 50)</text>
+
+        <!-- Chart Grid Lines -->
+        <line x1="40" y1="50" x2="445" y2="50" stroke="#E2E8F0" stroke-width="1"/>
+        <line x1="40" y1="90" x2="445" y2="90" stroke="#E2E8F0" stroke-width="1"/>
+        <line x1="40" y1="130" x2="445" y2="130" stroke="#E2E8F0" stroke-width="1"/>
+        <line x1="40" y1="165" x2="445" y2="165" stroke="#CBD5E1" stroke-width="1.5"/>
+
+        <!-- Training Loss Curve (smooth downward exponential) -->
+        <path d="M 40 60 Q 120 150 445 158 L 445 165 L 40 165 Z" fill="url(#lossGrad)"/>
+        <path d="M 40 60 Q 120 150 445 158" stroke="#0052FF" stroke-width="3" fill="none"/>
+
+        <!-- Validation Accuracy Curve (smooth upward) -->
+        <path d="M 40 155 Q 140 70 445 62" stroke="#10B981" stroke-width="2.5" stroke-dasharray="5 3" fill="none"/>
+
+        <!-- Legend -->
+        <circle cx="280" cy="24" r="4" fill="#0052FF"/>
+        <text x="290" y="28" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#475569">Loss (0.042)</text>
+        <circle cx="370" cy="24" r="4" fill="#10B981"/>
+        <text x="380" y="28" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#475569">Akurasi (94.8%)</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="pBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052FF"/>
+      <stop offset="100%" stop-color="#003ECC"/>
+    </linearGradient>
+    <linearGradient id="pCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="pCardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Electric Royal Blue Canvas Background -->
+  <rect width="1200" height="750" fill="url(#pBgGrad)"/>
+
+  <!-- Geometric Halftone / Dot Grid -->
+  <g opacity="0.18" fill="#FFFFFF">
+    <circle cx="80" cy="80" r="2.5"/><circle cx="160" cy="80" r="2.5"/><circle cx="240" cy="80" r="2.5"/><circle cx="320" cy="80" r="2.5"/><circle cx="400" cy="80" r="2.5"/><circle cx="480" cy="80" r="2.5"/><circle cx="560" cy="80" r="2.5"/><circle cx="640" cy="80" r="2.5"/><circle cx="720" cy="80" r="2.5"/><circle cx="800" cy="80" r="2.5"/><circle cx="880" cy="80" r="2.5"/><circle cx="960" cy="80" r="2.5"/><circle cx="1040" cy="80" r="2.5"/><circle cx="1120" cy="80" r="2.5"/>
+    <circle cx="80" cy="180" r="2.5"/><circle cx="160" cy="180" r="2.5"/><circle cx="240" cy="180" r="2.5"/><circle cx="320" cy="180" r="2.5"/><circle cx="400" cy="180" r="2.5"/><circle cx="480" cy="180" r="2.5"/><circle cx="560" cy="180" r="2.5"/><circle cx="640" cy="180" r="2.5"/><circle cx="720" cy="180" r="2.5"/><circle cx="800" cy="180" r="2.5"/><circle cx="880" cy="180" r="2.5"/><circle cx="960" cy="180" r="2.5"/><circle cx="1040" cy="180" r="2.5"/><circle cx="1120" cy="180" r="2.5"/>
+    <circle cx="80" cy="280" r="2.5"/><circle cx="160" cy="280" r="2.5"/><circle cx="240" cy="280" r="2.5"/><circle cx="320" cy="280" r="2.5"/><circle cx="400" cy="280" r="2.5"/><circle cx="480" cy="280" r="2.5"/><circle cx="560" cy="280" r="2.5"/><circle cx="640" cy="280" r="2.5"/><circle cx="720" cy="280" r="2.5"/><circle cx="800" cy="280" r="2.5"/><circle cx="880" cy="280" r="2.5"/><circle cx="960" cy="280" r="2.5"/><circle cx="1040" cy="280" r="2.5"/><circle cx="1120" cy="280" r="2.5"/>
+    <circle cx="80" cy="380" r="2.5"/><circle cx="160" cy="380" r="2.5"/><circle cx="240" cy="380" r="2.5"/><circle cx="320" cy="380" r="2.5"/><circle cx="400" cy="380" r="2.5"/><circle cx="480" cy="380" r="2.5"/><circle cx="560" cy="380" r="2.5"/><circle cx="640" cy="380" r="2.5"/><circle cx="720" cy="380" r="2.5"/><circle cx="800" cy="380" r="2.5"/><circle cx="880" cy="380" r="2.5"/><circle cx="960" cy="380" r="2.5"/><circle cx="1040" cy="380" r="2.5"/><circle cx="1120" cy="380" r="2.5"/>
+    <circle cx="80" cy="480" r="2.5"/><circle cx="160" cy="480" r="2.5"/><circle cx="240" cy="480" r="2.5"/><circle cx="320" cy="480" r="2.5"/><circle cx="400" cy="480" r="2.5"/><circle cx="480" cy="480" r="2.5"/><circle cx="560" cy="480" r="2.5"/><circle cx="640" cy="480" r="2.5"/><circle cx="720" cy="480" r="2.5"/><circle cx="800" cy="480" r="2.5"/><circle cx="880" cy="480" r="2.5"/><circle cx="960" cy="480" r="2.5"/><circle cx="1040" cy="480" r="2.5"/><circle cx="1120" cy="480" r="2.5"/>
+    <circle cx="80" cy="580" r="2.5"/><circle cx="160" cy="580" r="2.5"/><circle cx="240" cy="580" r="2.5"/><circle cx="320" cy="580" r="2.5"/><circle cx="400" cy="580" r="2.5"/><circle cx="480" cy="580" r="2.5"/><circle cx="560" cy="580" r="2.5"/><circle cx="640" cy="580" r="2.5"/><circle cx="720" cy="580" r="2.5"/><circle cx="800" cy="580" r="2.5"/><circle cx="880" cy="580" r="2.5"/><circle cx="960" cy="580" r="2.5"/><circle cx="1040" cy="580" r="2.5"/><circle cx="1120" cy="580" r="2.5"/>
+    <circle cx="80" cy="680" r="2.5"/><circle cx="160" cy="680" r="2.5"/><circle cx="240" cy="680" r="2.5"/><circle cx="320" cy="680" r="2.5"/><circle cx="400" cy="680" r="2.5"/><circle cx="480" cy="680" r="2.5"/><circle cx="560" cy="680" r="2.5"/><circle cx="640" cy="680" r="2.5"/><circle cx="720" cy="680" r="2.5"/><circle cx="800" cy="680" r="2.5"/><circle cx="880" cy="680" r="2.5"/><circle cx="960" cy="680" r="2.5"/><circle cx="1040" cy="680" r="2.5"/><circle cx="1120" cy="680" r="2.5"/>
+  </g>
+
+  <!-- Large Semi-transparent Stylized ARSTN Watermark -->
+  <text x="600" y="320" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="220" font-weight="900" fill="#FFFFFF" opacity="0.08" text-anchor="middle" letter-spacing="0.06em">ARSTN</text>
+
+  <!-- Main Showcase Browser Window -->
+  <g filter="url(#pCardShadow)" transform="translate(60, 45)">
+    <rect width="1080" height="660" rx="22" fill="#FFFFFF" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+
+    <!-- Browser Header Bar -->
+    <path d="M 0 22 A 22 22 0 0 1 22 0 L 1058 0 A 22 22 0 0 1 1080 22 L 1080 56 L 0 56 Z" fill="#F8FAFC"/>
+    <line x1="0" y1="56" x2="1080" y2="56" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Window Dots -->
+    <circle cx="32" cy="28" r="6" fill="#EF4444"/>
+    <circle cx="52" cy="28" r="6" fill="#F59E0B"/>
+    <circle cx="72" cy="28" r="6" fill="#10B981"/>
+
+    <!-- URL Bar Pill -->
+    <rect x="340" y="14" width="400" height="28" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="360" cy="28" r="3.5" fill="#10B981"/>
+    <text x="375" y="33" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">https://alfianariston.vercel.app</text>
+
+    <!-- Header Actions -->
+    <rect x="940" y="16" width="112" height="24" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+    <text x="996" y="32" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="800" fill="#0052FF" text-anchor="middle">NEXT.JS 14 • TS</text>
+
+    <!-- HERO PREVIEW STAGE INSIDE BROWSER -->
+    <!-- Mini Kinetic Wordmark Stage -->
+    <g transform="translate(48, 80)">
+      <!-- Mini Nav -->
+      <rect width="984" height="42" rx="21" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="12" y="7" width="94" height="28" rx="14" fill="#0052FF"/>
+      <text x="59" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">ARSTN ©2026</text>
+
+      <text x="320" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">TENTANG</text>
+      <text x="420" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">KEAHLIAN</text>
+      <text x="520" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#0052FF">KARYA</text>
+      <text x="610" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">KONTAK</text>
+
+      <rect x="876" y="8" width="96" height="26" rx="13" fill="#FFFFFF" stroke="#0052FF" stroke-width="1.5"/>
+      <text x="924" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="800" fill="#0052FF" text-anchor="middle">TERSEDIA • ID/EN</text>
+    </g>
+
+    <!-- Hero Kinetic Letters Rendering (ARSTN) -->
+    <g transform="translate(48, 145)">
+      <rect width="984" height="190" rx="18" fill="url(#pCardGrad)" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <!-- Stretched SVG Outlines for ARSTN letters -->
+      <!-- A -->
+      <path d="M 90 160 L 90 55 L 145 55 L 145 160 M 90 105 L 145 105" stroke="#0052FF" stroke-width="18" stroke-linecap="square" fill="none"/>
+      <!-- R -->
+      <path d="M 195 160 L 195 55 L 250 55 C 265 55 265 105 250 105 L 195 105 M 235 105 L 260 160" stroke="#0052FF" stroke-width="18" stroke-linecap="square" fill="none"/>
+      <!-- S -->
+      <path d="M 370 70 C 370 55 310 55 310 90 C 310 135 370 120 370 150 C 370 170 310 170 310 150" stroke="#0052FF" stroke-width="18" stroke-linecap="square" fill="none"/>
+      <!-- T -->
+      <path d="M 420 55 L 490 55 M 455 55 L 455 160" stroke="#0052FF" stroke-width="18" stroke-linecap="square" fill="none"/>
+      <!-- N -->
+      <path d="M 540 160 L 540 55 L 610 160 L 610 55" stroke="#0052FF" stroke-width="18" stroke-linecap="square" fill="none"/>
+
+      <!-- 3D Illustrated Carton Box in Hero -->
+      <g transform="translate(800, 30)">
+        <polygon points="40,20 110,0 110,80 40,105" fill="#0052FF" stroke="#003ECC" stroke-width="1.5"/>
+        <polygon points="110,0 160,25 160,100 110,80" fill="#2563EB" stroke="#1D4ED8" stroke-width="1.5"/>
+        <polygon points="40,20 110,0 160,25 90,45" fill="#60A5FA" stroke="#3B82F6" stroke-width="1.5"/>
+        <text x="75" y="75" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">3D CUBE</text>
+      </g>
+    </g>
+
+    <!-- 3 Bento Feature Highlights -->
+    <g transform="translate(48, 360)">
+      <!-- Card 1: Interactive Physics & Wordmark -->
+      <rect x="0" y="0" width="310" height="230" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="20" y="20" width="40" height="40" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+      <circle cx="40" cy="40" r="10" fill="#0052FF"/>
+      <text x="20" y="86" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="800" fill="#0052FF" letter-spacing="0.04em">GEOMETRI INTERAKTIF</text>
+      <text x="20" y="112" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="800" fill="#0A0F1D">Dynamic Stretch Hero</text>
+      <text x="20" y="136" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">
+        Huruf meregang secara adaptif mengikuti posisi pointer kursor dengan fisika elastis halus.
+      </text>
+      <rect x="20" y="180" width="130" height="26" rx="13" fill="#FFFFFF" stroke="#0052FF" stroke-width="1"/>
+      <text x="85" y="197" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#0052FF" text-anchor="middle">CRITICAL DAMPING</text>
+
+      <!-- Card 2: Editorial Typography & Color Balance -->
+      <rect x="336" y="0" width="310" height="230" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="356" y="20" width="40" height="40" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+      <rect x="368" y="32" width="16" height="16" rx="4" fill="#0052FF"/>
+      <text x="356" y="86" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="800" fill="#0052FF" letter-spacing="0.04em">PALET IDENTITAS</text>
+      <text x="356" y="112" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="800" fill="#0A0F1D">Putih &amp; Royal Blue</text>
+      <text x="356" y="136" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">
+        Kontras terstandar WCAG AA (>4.5:1), tipografi geometris Plus Jakarta Sans &amp; Inter.
+      </text>
+      <g transform="translate(356, 178)">
+        <rect x="0" y="0" width="60" height="28" rx="8" fill="#0052FF"/>
+        <text x="30" y="18" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">#0052FF</text>
+        <rect x="68" y="0" width="60" height="28" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="98" y="18" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="700" fill="#0A0F1D" text-anchor="middle">#FFFFFF</text>
+      </g>
+
+      <!-- Card 3: Modern Tech Stack -->
+      <rect x="672" y="0" width="312" height="230" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="692" y="20" width="40" height="40" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+      <polygon points="712,28 724,48 700,48" fill="#0052FF"/>
+      <text x="692" y="86" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="800" fill="#0052FF" letter-spacing="0.04em">ARSITEKTUR FRONTEND</text>
+      <text x="692" y="112" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="800" fill="#0A0F1D">Modern Web Engine</text>
+      <text x="692" y="136" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">
+        Next.js App Router, Tailwind CSS, TypeScript, Framer Motion, dan integrasi i18n dwibahasa.
+      </text>
+      <g transform="translate(692, 178)">
+        <rect x="0" y="0" width="80" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+        <text x="40" y="17" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700" fill="#0052FF" text-anchor="middle">Next.js 14</text>
+        <rect x="88" y="0" width="85" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+        <text x="130" y="17" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700" fill="#0052FF" text-anchor="middle">TypeScript</text>
+        <rect x="180" y="0" width="85" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+        <text x="222" y="17" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700" fill="#0052FF" text-anchor="middle">Tailwind</text>
+      </g>
+    </g>
+  </g>
+</svg>
