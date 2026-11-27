@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  useCallback,
   useEffect,
   useId,
   useRef,
@@ -468,7 +469,7 @@ export default function BunkumWordmarkHero({
       fp.removeEventListener("change", sync)
       window.clearTimeout(toastTimer.current)
     }
-  }, [])
+  }, [schedule])
 
   const frame = (now: number) => {
     const st = s.current
@@ -543,12 +544,13 @@ export default function BunkumWordmarkHero({
     if (busy && st.visible) schedule()
   }
 
-  const schedule = () => {
+  const schedule = useCallback(() => {
     const st = s.current
     if (!st.raf && typeof window !== "undefined") {
       st.raf = window.requestAnimationFrame(frame)
     }
-  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     const root = rootRef.current
@@ -587,11 +589,11 @@ export default function BunkumWordmarkHero({
       ro.disconnect()
       io.disconnect()
       window.removeEventListener("scroll", onScroll)
-      const st = s.current
-      if (st.raf) window.cancelAnimationFrame(st.raf)
-      st.raf = 0
+      const raf = s.current.raf
+      if (raf) window.cancelAnimationFrame(raf)
+      s.current.raf = 0
     }
-  }, [activeWord, activeCells, vbW])
+  }, [activeWord, activeCells, vbW, getCellMid, schedule])
 
   const releaseMagnet = () => {
     const st = s.current
