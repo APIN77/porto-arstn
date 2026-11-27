@@ -155,7 +155,7 @@ export function Projects() {
 
                         {/* Clean Index Badge */}
                         <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-xs font-medium text-white">
-                          0{i + 1} // Project
+                          {i + 1} {/* Project */}
                         </div>
                       </div>
 
