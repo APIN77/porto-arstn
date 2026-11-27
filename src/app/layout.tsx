@@ -1,22 +1,22 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { LanguageProvider } from '@/hooks/useLanguage';
-import { ThemeProvider } from '@/hooks/useTheme';
+import type { Metadata } from 'next'
+import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
+import './globals.css'
+import { LanguageProvider } from '@/hooks/useLanguage'
+import { ThemeProvider } from '@/hooks/useTheme'
 
-// Font imports disabled for offline build environment
-// import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
-// const plusJakarta = Plus_Jakarta_Sans({
-//   subsets: ['latin'],
-//   variable: '--font-heading',
-//   display: 'swap',
-//   weight: ['400', '500', '600', '700', '800'],
-// });
-// const inter = Inter({
-//   subsets: ['latin'],
-//   variable: '--font-body',
-//   display: 'swap',
-//   weight: ['400', '500', '600', '700'],
-// });
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://alfianariston.vercel.app'),
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${plusJakarta.variable} ${inter.variable}`}>
       <body className="font-sans antialiased bg-primary text-text-primary">
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>
