@@ -383,8 +383,8 @@ export default function BunkumWordmarkHero({
   const activeWord = word
   const activeCells = cells
   const vbW = PAD * 2 + activeCells.reduce((a, b) => a + b, 0) + GAP * (activeCells.length - 1)
-  const getCellX = (i: number) => PAD + activeCells.slice(0, i).reduce((a, b) => a + b, 0) + GAP * i
-  const getCellMid = (i: number) => getCellX(i) + (activeCells[i] ?? 96) / 2
+  const getCellX = useCallback((i: number) => PAD + activeCells.slice(0, i).reduce((a, b) => a + b, 0) + GAP * i, [activeCells])
+  const getCellMid = useCallback((i: number) => getCellX(i) + (activeCells[i] ?? 96) / 2, [getCellX, activeCells])
 
   const s = useRef({
     W: 0,
@@ -452,6 +452,8 @@ export default function BunkumWordmarkHero({
     toastTimer.current = window.setTimeout(() => setToast((t) => ({ ...t, on: false })), 2800)
   }
 
+  const scheduleRef = useRef<(() => void) | null>(null)
+
   useEffect(() => {
     if (typeof window === "undefined" || !window.matchMedia) return
     const rm = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -459,7 +461,7 @@ export default function BunkumWordmarkHero({
     const sync = () => {
       s.current.still = rm.matches
       s.current.fine = fp.matches
-      schedule()
+      scheduleRef.current?.()
     }
     sync()
     rm.addEventListener("change", sync)
@@ -469,7 +471,7 @@ export default function BunkumWordmarkHero({
       fp.removeEventListener("change", sync)
       window.clearTimeout(toastTimer.current)
     }
-  }, [schedule])
+  }, [])
 
   const frame = (now: number) => {
     const st = s.current
@@ -541,7 +543,7 @@ export default function BunkumWordmarkHero({
       put(cursorRef.current, "transform", "translate3d(" + f(st.px) + "px," + f(st.py) + "px,0)")
     }
 
-    if (busy && st.visible) schedule()
+    if (busy && st.visible) scheduleRef.current?.()
   }
 
   const schedule = useCallback(() => {
@@ -551,6 +553,8 @@ export default function BunkumWordmarkHero({
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  scheduleRef.current = schedule
 
   useEffect(() => {
     const root = rootRef.current
@@ -573,27 +577,28 @@ export default function BunkumWordmarkHero({
         st.tg = activeWord.map(() => b)
         setBase(b)
       }
-      schedule()
+      scheduleRef.current?.()
     }
     measure()
     const ro = new ResizeObserver(measure)
     ro.observe(root)
-    const onScroll = () => schedule()
+    const onScroll = () => scheduleRef.current?.()
     window.addEventListener("scroll", onScroll, { passive: true })
     const io = new IntersectionObserver((list) => {
       s.current.visible = list.some((x) => x.isIntersecting)
-      if (s.current.visible) schedule()
+      if (s.current.visible) scheduleRef.current?.()
     })
     io.observe(root)
     return () => {
       ro.disconnect()
       io.disconnect()
       window.removeEventListener("scroll", onScroll)
-      const raf = s.current.raf
+      const st = s.current
+      const raf = st.raf
       if (raf) window.cancelAnimationFrame(raf)
-      s.current.raf = 0
+      st.raf = 0
     }
-  }, [activeWord, activeCells, vbW, getCellMid, schedule])
+  }, [activeWord, activeCells, vbW, getCellMid])
 
   const releaseMagnet = () => {
     const st = s.current
